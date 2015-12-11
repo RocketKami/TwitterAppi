@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>Reset</servlet-name>
+        <servlet-class>WebApp.Reset</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Callback</servlet-name>
+        <servlet-class>WebApp.Callback</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TwitterConsumer</servlet-name>
+        <servlet-class>WebApp.TwitterConsumer</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserAuthorizationStub</servlet-name>
+        <servlet-class>WebApp.UserAuthorizationStub</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Reset</servlet-name>
+        <url-pattern>/Reset</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Callback</servlet-name>
+        <url-pattern>/OAuth/Callback</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TwitterConsumer</servlet-name>
+        <url-pattern>/Twitter</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserAuthorizationStub</servlet-name>
+        <url-pattern>/OAuth/UserAuthorizationStub/*</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
